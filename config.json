@@ -1,0 +1,60 @@
+﻿{
+    "description": "Azure ML services configurations for MLOps Framework",
+    "copyright": "BizData Pty Ltd (c) 2020",
+    "workspace": {
+        "description": "Define workspace creation, auth will be provided using Azure CLI",
+        "reference": "https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.workspace(class)?view=azure-ml-py",
+        "configuration": {
+            "name": "mlopscourse",
+            "subscription_id": "101913aa-06b3-4540-8aa5-c2737387e7ee",
+            "resource_group": "datascienceworld",
+            "location": "eastus2",
+            "create_resource_group": true,
+            "tags": {"Environment": "Dev", "Course": "MLOps-K1"},
+            "friendly_name": null,
+            "storage_account": null,
+            "key_vault": "mlopscourse1903153941",
+            "app_insights": "mlopscourse7474290937",
+            "container_registry": "4cb317f096074ea496a48b55a272070e",
+            "adb_workspace": null,
+            "primary_user_assigned_identity": null,
+            "cmk_keyvault": null,
+            "resource_cmk_uri": null,
+            "hbi_workspace": false,
+            "private_endpoint_config": null,
+            "private_endpoint_auto_approval": true,
+            "exist_ok": true,
+            "show_output": true,
+            "user_assigned_identity_for_cmk_encryption": null,
+            "system_datastores_auth_mode": "accessKey"
+        }
+    },
+    "datastore": {
+        "description": "Register datastore, possible types are azure_blob_container, data_lake, data_lake_gen2, file_share, my_sql, postgre_sql, sql_database, dbfs (configuration values differ for each type)",
+        "reference": "https://docs.microsoft.com/en-us/python/api/azureml-core/azureml.core.datastore.datastore?view=azure-ml-py",
+        "comment": [
+            {"azure_blob_container": "access can either be sas_token or account_key"},
+            {"azure_data_lake_gen2": "access is via service principal only (tenant_id, client_id, client_secret)"},
+            {"azure_sql_database": "access is either service principal (tenant_id, client_id, client_secret) or sql user (username, password)"}
+        ],
+        "configuration": [
+            {
+                "type": "azure_blob_container",
+                "datastore_name": "workspaceblobstore",
+                "container_name": "azureml-blobstore-4cb317f0-9607-4ea4-96a4-8b55a272070e",
+                "account_name": "mlopscourse4602067535",
+                "sas_token": null,
+                "account_key": "Lykvxdgs2LdkRZaCQ1R6GFJzV7eh8O4/HfSSXiQ/yyOCjawxJz4aER9/m/0yTjraO41cb65Hscp5+ASt5Ttrdg==",
+                "protocol": null,
+                "endpoint": null,
+                "overwrite": false,
+                "create_if_not_exists": false,
+                "skip_validation": false,
+                "blob_cache_timeout": null,
+                "grant_workspace_access": false,
+                "subscription_id": "101913aa-06b3-4540-8aa5-c2737387e7ee",
+                "resource_group": "datascienceworld"
+            }
+        ]
+    }
+}
