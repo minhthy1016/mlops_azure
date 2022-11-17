@@ -2,6 +2,8 @@
 
 This is a repo to setup a CI/CD for MLOps course that organized by DataScienceWorld.Kan.
 The target will be an Azure DevOps CI/CD pipeline that setup infrastructure over Azure ML workspace and run a test for training/test split dataset.
+The dataset and ML models are built for abalone age prediction dataset. 
+Link of dataset credit to: https://www.kaggle.com/datasets/rodolfomendes/abalone-dataset
 
 # Setup Azure-cli steps in CD
 
